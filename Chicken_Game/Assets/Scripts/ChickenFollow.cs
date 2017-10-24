@@ -15,7 +15,7 @@ target = GameObject.FindWithTag("Player").transform;
 
 }
 
-void Update () {
+void FixedUpdate () {
 
 transform.LookAt (target);
 transform.Translate (Vector3.forward * Time.deltaTime);
