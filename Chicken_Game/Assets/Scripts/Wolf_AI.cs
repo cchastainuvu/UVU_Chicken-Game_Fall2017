@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class Wolf_AI : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public Rigidbody wolf;
+	public float moveSpeed;
+	public Transform target;
+
+
+void Random () {}
+
+void OnTriggerStay(Collider other) {
+
+if (other.gameObject.name == "Player") {
+	transform.LookAt (target);
+	transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
 }
+
+}
+
+}
+
+
