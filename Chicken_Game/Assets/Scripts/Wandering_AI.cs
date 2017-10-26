@@ -7,7 +7,8 @@ public class Wandering_AI : MonoBehaviour {
 
 public float speed = 5;
 public float directionChangeInterval = 1;
-public float maxHeadingChange = 10;
+public float maxHeadingChange = 30;
+
 
 CharacterController controller;
 float heading;
