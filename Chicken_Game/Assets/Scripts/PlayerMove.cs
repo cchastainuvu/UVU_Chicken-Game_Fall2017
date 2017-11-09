@@ -10,6 +10,8 @@ public float moveSpeed;
 public float turnSpeed;
 public float jumpHeight;
 
+// public Rigidbody rigidBody;
+
 //Anytime you have a value you would like to store and process later, use a variable.
 //To be accessible to the inspector, the variables must be written with public access.
 //Need to establish behavior of player before writing the script, write variables accordingly.
@@ -40,5 +42,24 @@ don't go crazy updating nearly 60 times per second, like my computer.*/
 //Add Rigid Body to calculate physics. Add Component > Physics > Rigid Body
 //Add constraints so the capsule will not fall over. Do not freeze Y, or no turn.
 }
+
+// void Start () {
+// 	rigidBody = GetComponent<Rigidbody> ();
+// }
+
+// void OnCollisionEnter (Collider other) {
+
+// 	if (other.gameObject.name == "Chicken") {
+// 		rigidBody.velocity = new Vector3 (0,10,0);
+// 	}
+// 	else if (other.gameObject.name == "Wolf") {
+// 		rigidBody.velocity = new Vector3 (0,10,0);
+// 	}
+
+// 	else {
+// 		rigidBody.velocity = new Vector3 (0,10,0);
+// 	}
+
+// }
 
 }

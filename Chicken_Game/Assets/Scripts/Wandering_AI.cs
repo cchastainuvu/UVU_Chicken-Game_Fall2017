@@ -2,47 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof(CharacterController))]
 public class Wandering_AI : MonoBehaviour {
 
-public float speed = 5;
-public float directionChangeInterval = 1;
-public float maxHeadingChange = 30;
+public float moveSpeed;
+public float rotSpeed;
 
+Vector3 turnAround = new Vector3 (0,1,0);
 
-CharacterController controller;
-float heading;
-Vector3 targetRotation;
-
-void Awake () {
-	controller = GetComponent <CharacterController>();
-	heading = Random.Range (0,360);
-	transform.eulerAngles = new Vector3 (0 , heading , 0);
-
-	StartCoroutine (NewHeading());
+void Update () {
+	Wander();
 }
 
-void Update ()
-	{
-		transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, targetRotation, Time.deltaTime * directionChangeInterval);
-		var forward = transform.TransformDirection(Vector3.forward);
-		controller.SimpleMove(forward * speed);
-	}
- 
-	IEnumerator NewHeading ()
-	{
-		while (true) {
-			NewHeadingRoutine();
-			yield return new WaitForSeconds(directionChangeInterval);
-		}
+void Wander () {
+	transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
+}
+
+void OnTriggerStay (Collider other) {
+	
+	if (other.gameObject.tag == "wall") {
+		Debug.Log ("Wall has been triggered.");
+		transform.Rotate (turnAround * rotSpeed * Time.deltaTime);
 	}
 
-	void NewHeadingRoutine ()
-	{
-		var floor = Mathf.Clamp(heading - maxHeadingChange, 0, 360);
-		var ceil  = Mathf.Clamp(heading + maxHeadingChange, 0, 360);
-		heading = Random.Range(floor, ceil);
-		targetRotation = new Vector3(0, heading, 0);
-	}
+}
+
 
 }
