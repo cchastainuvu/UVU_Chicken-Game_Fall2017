@@ -16,7 +16,7 @@ public Text maxHp;
 void Update () {
 
 	hp.text = currentHealth.ToString();
-	maxHp.text = maxHealth.ToString();
+	maxHp.text = maxHealth.ToString ();
 
 //Must convert integer to a string through parsing.
 

@@ -17,18 +17,25 @@ public int hopPoints = 20;
 // Vector3 wayPoint;
 // public int range = 10;
 
+// void Update () { 
+	
+// }
+
 void OnTriggerStay (Collider other) {
 
 	if (other.gameObject.name == "Player") {
 		Debug.Log ("Player has entered the chicken's trigger.");
-		transform.LookAt (target);
-		transform.Translate (Vector3.forward * - moveSpeed * Time.deltaTime);
-
+		// transform.LookAt (target);
+		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
+		transform.rotation = Quaternion.Inverse (target.rotation);
 	}
 
-
-	
 }
+
+// void OnTriggerEnter(Collider other)
+// {
+// 	transform.Rotate (0,180,0);
+// }
 
 void OnCollisionEnter (Collision other) {
 
@@ -48,7 +55,13 @@ void OnCollisionEnter (Collision other) {
 
 		}
 
+		else if (other.gameObject.name == "Chicken Pen") {
+			
+		}
 }
+
+
+
 
 //Beginning Wandering AI...
 
@@ -76,6 +89,5 @@ void OnCollisionEnter (Collision other) {
 
 // 	// Debug.Log (wayPoint + " and " + (transform.position - wayPoint).magnitude);
 // }
-
 
 }
