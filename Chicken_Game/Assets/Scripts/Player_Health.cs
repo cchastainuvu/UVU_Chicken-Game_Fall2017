@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player_Health : MonoBehaviour {
 
-public const int maxHealth = 10;
+public const int maxHealth = 100;
 public int currentHealth = maxHealth;
 //Set to maxHealth, because if maxHealth is changed, currentHealth will change. Starting point.
 
