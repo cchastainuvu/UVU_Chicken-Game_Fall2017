@@ -7,8 +7,9 @@ public class Score_Manager : MonoBehaviour {
 
 public static int score;
 //Static gives variable more flexibility.
+//Usually other properties will need to be static to use with static variable.
 
-
+public int scoreAmount = score;
 public Text text;
 
 
