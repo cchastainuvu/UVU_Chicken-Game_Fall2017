@@ -25,8 +25,8 @@ void Start () {
 }
 
 void Update () {
-	// currentScore = scoreManager.gameObject.GetComponentInChildren<Score_Manager>().scoreAmount;
-	currentScore = scoreManager.scoreAmount;
+	currentScore = scoreManager.gameObject.GetComponent<Score_Manager>().scoreAmount;
+	// currentScore = scoreManager.scoreAmount;
 	print("currentScore =" + currentScore);
 	if (winScore == currentScore) {
 		print("winScore reached" + currentScore);
