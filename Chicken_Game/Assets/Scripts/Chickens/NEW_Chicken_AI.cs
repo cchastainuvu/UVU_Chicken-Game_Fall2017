@@ -33,6 +33,17 @@ void OnCollisionEnter (Collision other) {
 		transform.position = chickenPen.position;
 		transform.rotation = chickenPen.rotation;
 	}
+		if (other.gameObject.tag == "Checkpoint") {
+			Turn();
+	}
+}
+
+void Turn () {
+	// int randomNum = Random.Range (0,360);
+	transform.Rotate (0,172,0);
+	transform.Translate (Vector3.forward);
+
+}
 
 }
 
@@ -82,5 +93,3 @@ void OnCollisionEnter (Collision other) {
 // 		}
 // }
 
-
-}

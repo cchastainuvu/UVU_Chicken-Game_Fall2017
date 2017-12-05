@@ -32,9 +32,18 @@ public void OnCollisionEnter (Collision other) {
 		if (pcHealth != null) {
 			pcHealth.gameObject.GetComponent<Player_Health>().TakeDamage(damage);
 		}
-	
+		if (other.gameObject.tag == "Checkpoint") {
+			Turn();
+		}
 	}
 }
+
+void Turn () {
+	int randomNum = Random.Range (0,360);
+	transform.Rotate (0,randomNum,0);
+}
+
+
 }
 
 

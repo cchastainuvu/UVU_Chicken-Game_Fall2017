@@ -30,9 +30,9 @@ public static void AddPoints (int pointsToAdd) {
 	//Prevents new score from replacing current total.
 }
 
-public static void AddPointsHop (int pointsToAdd2) {
-	score = score + pointsToAdd2;
-}
+// public static void AddPointsHop (int pointsToAdd2) {
+// 	score = score + pointsToAdd2;
+// }
 public void Reset () {
 	score = 0;
 }

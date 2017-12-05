@@ -27,7 +27,7 @@ void Start () {
 void Update () {
 	currentScore = scoreManager.gameObject.GetComponent<Score_Manager>().scoreAmount;
 	// currentScore = scoreManager.scoreAmount;
-	print("currentScore =" + currentScore);
+	// print("currentScore =" + currentScore);
 	if (winScore == currentScore) {
 		print("winScore reached" + currentScore);
 		//Can enable or disable the text to appear.
