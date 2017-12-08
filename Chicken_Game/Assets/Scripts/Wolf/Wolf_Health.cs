@@ -9,9 +9,9 @@ public int maxHealth = 3;
 public Transform spawnPoint;
 public int points;
 
-// void Start () {
-// 	currentHealth = maxHealth;
-// }
+void Start () {
+	currentHealth = maxHealth;
+}
 
 
 //TakeDamage will be called from another script.

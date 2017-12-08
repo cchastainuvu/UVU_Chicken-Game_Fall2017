@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Score_Manager : MonoBehaviour {
 
@@ -12,10 +13,19 @@ public static int score;
 public int scoreAmount = score;
 public Text text;
 
+public Text winText;
+public int winScore;
+
+void Awake () {
+	Time.timeScale = 1;
+}
+
 
 void Start () {
 	text = GetComponent<Text>();
 		score = 0;
+
+	winText.GetComponent<Text>().enabled = false;
 }
 
 void Update () {
@@ -23,6 +33,18 @@ void Update () {
 		score = 0;
 
 	text.text = " " + score;
+
+
+	if (score >= winScore ) {
+		print("winScore reached" + score);
+		//Can enable or disable the text to appear.
+		winText.GetComponent<Text>().enabled = true;
+		Time.timeScale = 0;
+	}
+
+	if (Input.GetKeyDown(KeyCode.Escape)){
+		SceneManager.LoadScene(0);
+	}
 }
 
 public static void AddPoints (int pointsToAdd) {

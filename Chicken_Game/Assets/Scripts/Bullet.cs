@@ -22,6 +22,10 @@ void OnCollisionEnter(Collision other)
 	if (other.gameObject.name == "Wolf") {
 		Destroy(gameObject);
 	}
+
+	if (other.gameObject.name == "Fox") {
+		Destroy(other.gameObject);
+	}
 }
 }
 

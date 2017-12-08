@@ -6,7 +6,7 @@ using UnityEngine.AI;
 // [RequireComponent (typeof(CharacterController))]
 public class Wolf_AI : MonoBehaviour {
 
-	public Rigidbody wolf;
+	// public Rigidbody wolf;
 	public float moveSpeed;
 	public Transform target;
 	public int damage;
@@ -28,14 +28,14 @@ public void OnCollisionEnter (Collision other) {
 		var hit = other.gameObject;
 		var health = hit.GetComponent<Player_Health>();
 		print ("Wolf is attacking!");
-
+		
 		if (pcHealth != null) {
 			pcHealth.gameObject.GetComponent<Player_Health>().TakeDamage(damage);
 		}
 		if (other.gameObject.tag == "Checkpoint") {
 			Turn();
-		}
 	}
+}
 }
 
 void Turn () {
@@ -43,8 +43,8 @@ void Turn () {
 	transform.Rotate (0,randomNum,0);
 }
 
-
 }
+
 
 
 // void OnTriggerStay(Collider other) {
