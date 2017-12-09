@@ -10,9 +10,13 @@ public class NEW_Chicken_AI : MonoBehaviour {
 public float moveSpeed;
 public Transform target;
 public Transform chickenPen;
+public Transform chickenSpawn;
 public int points = 10;
+public int time = 4;
 
-
+// void Update () {
+// 	StartCoroutine(SpawnChicken());
+// }
 
 void OnTriggerStay (Collider other) {
 	if (other.gameObject.name == "Player") {
@@ -36,6 +40,12 @@ void OnCollisionEnter (Collision other) {
 		if (other.gameObject.tag == "Checkpoint") {
 			Turn();
 	}
+	if (other.gameObject.tag == "Fox") {
+		// transform.position = chickenSpawn.position;
+		// transform.rotation = chickenSpawn.rotation;
+		// SpawnChicken();
+		Destroy(gameObject);
+	}
 }
 
 void Turn () {
@@ -44,6 +54,12 @@ void Turn () {
 	transform.Translate (Vector3.forward);
 
 }
+
+// IEnumerator SpawnChicken () {
+// 	yield return new WaitForSeconds(time);
+// 	transform.position = chickenSpawn.position;
+// 	transform.rotation = chickenSpawn.rotation;
+// }
 
 }
 

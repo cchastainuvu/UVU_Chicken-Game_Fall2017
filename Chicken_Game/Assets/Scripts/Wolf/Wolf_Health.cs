@@ -17,6 +17,11 @@ void Start () {
 //TakeDamage will be called from another script.
 public void TakeDamage (int amount) {
 	currentHealth -= amount;
+
+	// if (currentHealth < 3 && currentHealth > 0) {
+	// 	Score_Manager.AddPoints(points);
+	// }
+
 	if (currentHealth <= 0) {
 		currentHealth = 0;
 		print ("The Wolf is dead!");

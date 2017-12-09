@@ -11,10 +11,16 @@ public static int score;
 //Usually other properties will need to be static to use with static variable.
 
 public int scoreAmount = score;
+
+// public int pcHealth;
+// public GameObject healthMonitor;
 public Text text;
 
 public Text winText;
+// public Text loseText;
 public int winScore;
+// public int loseScore;
+
 
 void Awake () {
 	Time.timeScale = 1;
@@ -29,6 +35,10 @@ void Start () {
 }
 
 void Update () {
+	
+	// pcHealth = healthMonitor.gameObject.GetComponent<Player_Health>().currentHealth;
+	// pcHealth = healthMonitor.currentHealth;
+
 	if (score < 0)
 		score = 0;
 
@@ -41,6 +51,11 @@ void Update () {
 		winText.GetComponent<Text>().enabled = true;
 		Time.timeScale = 0;
 	}
+
+	// if (pcHealth <= 0)
+	// 	loseText.GetComponent<Text>().enabled = true;
+	// 	Time.timeScale=0;
+	
 
 	if (Input.GetKeyDown(KeyCode.Escape)){
 		SceneManager.LoadScene(0);

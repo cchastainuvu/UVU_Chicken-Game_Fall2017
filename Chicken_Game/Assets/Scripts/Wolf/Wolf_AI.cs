@@ -12,15 +12,38 @@ public class Wolf_AI : MonoBehaviour {
 	public int damage;
 	public GameObject pcHealth;
 
+// public AudioClip wolfMusic;
+// public AudioSource audioSource;
+
+// void Awake () {
+// 	GetComponent<AudioSource> ().enabled = false;
+// }
+
+// void Start ()   
+//      {
+//          GetComponent<AudioSource> ().playOnAwake = false;
+//          GetComponent<AudioSource> ().clip = wolfMusic;
+//      } 
+
+// void OnTriggerEnter (Collider other) {
+// 	audioSource = GetComponent<AudioSource>();
+//         audioSource.clip = wolfMusic;
+//         audioSource.Play();
+// }
+
+
 void OnTriggerStay (Collider other) {
 	if (other.gameObject.name == "Player") {
+	
 		var wanderScript = this.gameObject.GetComponent<Wander>();
 		wanderScript.enabled = false;
 		transform.LookAt (target);
 		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
 		wanderScript.enabled = true;
+		
 	}
 }
+
 
 public void OnCollisionEnter (Collision other) {
 
@@ -34,6 +57,7 @@ public void OnCollisionEnter (Collision other) {
 		}
 		if (other.gameObject.tag == "Checkpoint") {
 			Turn();
+		
 	}
 }
 }

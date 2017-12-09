@@ -10,11 +10,19 @@ public float moveSpeed;
 public float turnSpeed;
 public float jumpHeight;
 
+// public AudioClip wolfMusic;
+
 // public Rigidbody rigidBody;
 
 //Anytime you have a value you would like to store and process later, use a variable.
 //To be accessible to the inspector, the variables must be written with public access.
 //Need to establish behavior of player before writing the script, write variables accordingly.
+
+// void Start ()   
+//      {
+//          GetComponent<AudioSource> ().playOnAwake = false;
+//          GetComponent<AudioSource> ().clip = wolfMusic;
+//      } 
 
 void Update () {
 
@@ -42,6 +50,15 @@ don't go crazy updating nearly 60 times per second, like my computer.*/
 //Add Rigid Body to calculate physics. Add Component > Physics > Rigid Body
 //Add constraints so the capsule will not fall over. Do not freeze Y, or no turn.
 }
+
+
+		// void OnTriggerStay (Collider other) {
+
+		// 	if (other.gameObject.name == "Wolf") {
+		// 	GetComponent<AudioSource> ().Play ();
+		// }
+		// }
+
 
 // void Start () {
 // 	rigidBody = GetComponent<Rigidbody> ();

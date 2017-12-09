@@ -12,14 +12,25 @@ public int currentHealth = maxHealth;
 public Text hp;
 public Text maxHp;
 
+public Text loseText;
+
+void Awake () {
+	Time.timeScale = 1;
+	loseText.GetComponent<Text>().enabled = false;
+}
 
 void Update () {
 
 	hp.text = currentHealth.ToString();
 	maxHp.text = maxHealth.ToString ();
 
+	if (currentHealth == 0) {
+	loseText.GetComponent<Text>().enabled = true;
+	Time.timeScale = 0;
+
 //Must convert integer to a string through parsing.
 
+}
 }
 
 public void TakeDamage (int amount) {
@@ -32,6 +43,22 @@ if (currentHealth <= 0) {
 	currentHealth = 0;
 	print ("You're Dead! Game Over!");
 }
+
+
+}
+public void RegainHealth (int amount) {
+
+	currentHealth += amount;
+
+	if (currentHealth > 0 && currentHealth < 100){
+		currentHealth = currentHealth + 20;
+		print ("You have been healed!");
+	}
+	if (currentHealth > 100) {
+		currentHealth = 100;
+	}
+
+
 
 }
 

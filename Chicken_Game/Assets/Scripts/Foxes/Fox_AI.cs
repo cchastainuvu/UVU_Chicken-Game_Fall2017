@@ -6,11 +6,18 @@ public class Fox_AI : MonoBehaviour {
 
 public Transform foxSpawn;
 public Transform target;
+public Transform target2;
+public Transform target3;
+public Transform target4;
+public Transform target5;
 public float moveSpeed;
 
 
 void Start () {
 	target = GameObject.FindWithTag("Chicken").transform;
+	// target2= GameObject.FindWithTag("Chicken").transform;
+	// target3= GameObject.FindWithTag("Chicken").transform;
+
 }
 
 void OnTriggerStay (Collider other) {
@@ -30,16 +37,16 @@ public void OnCollisionEnter (Collision other) {
 		transform.position = foxSpawn.position;
 		transform.rotation = foxSpawn.rotation;
 	}
-	if (other.gameObject.tag == "Chicken") {
-		// var hit = other.gameObject;
-		// var health = hit.GetComponent<Player_Health>();
-		// print ("Wolf is attacking!");
+	// if (other.gameObject.tag == "Chicken") {
+	// 	// var hit = other.gameObject;
+	// 	// var health = hit.GetComponent<Player_Health>();
+	// 	// print ("Wolf is attacking!");
 		
-		// if (pcHealth != null) {
-		// 	pcHealth.gameObject.GetComponent<Player_Health>().TakeDamage(damage);
+	// 	// if (pcHealth != null) {
+	// 	// 	pcHealth.gameObject.GetComponent<Player_Health>().TakeDamage(damage);
 
-		Destroy(other.gameObject);
-		}
+	// 	Destroy(other.gameObject);
+		// }
 		if (other.gameObject.tag == "Checkpoint") {
 			Turn();
 	}
