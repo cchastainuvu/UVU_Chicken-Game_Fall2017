@@ -2699,7 +2699,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 313542260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.12, y: 0, z: -21.97}
+  m_LocalPosition: {x: -11.12, y: 0, z: -94.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 879611695}
@@ -3104,7 +3104,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 356799591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.2, y: 0, z: -40.87}
+  m_LocalPosition: {x: 32.2, y: 0, z: -75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 879611695}
@@ -10683,6 +10683,7 @@ GameObject:
   - component: {fileID: 1007086609}
   - component: {fileID: 1007086608}
   - component: {fileID: 1007086617}
+  - component: {fileID: 1007086618}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Fox
@@ -10704,6 +10705,7 @@ MonoBehaviour:
   foxSpawn: {fileID: 435411426}
   target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
   moveSpeed: 1
+  foxCry: {fileID: 0}
 --- !u!114 &1007086609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10838,6 +10840,86 @@ MonoBehaviour:
   maxHealth: 1
   spawnPoint: {fileID: 435411426}
   points: 10
+--- !u!82 &1007086618
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007086607}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3b6b4efcdf27061478a68106e8e6428c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.28
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1008784135
 GameObject:
   m_ObjectHideFlags: 0
@@ -12051,6 +12133,7 @@ GameObject:
   - component: {fileID: 1083237694}
   - component: {fileID: 1083237693}
   - component: {fileID: 1083237702}
+  - component: {fileID: 1083237703}
   m_Layer: 0
   m_Name: Fox (1)
   m_TagString: Fox
@@ -12072,6 +12155,7 @@ MonoBehaviour:
   foxSpawn: {fileID: 435411426}
   target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
   moveSpeed: 1
+  foxCry: {fileID: 0}
 --- !u!114 &1083237694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12206,6 +12290,86 @@ MonoBehaviour:
   maxHealth: 1
   spawnPoint: {fileID: 0}
   points: 10
+--- !u!82 &1083237703
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083237692}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3b6b4efcdf27061478a68106e8e6428c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.29
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1086503154
 GameObject:
   m_ObjectHideFlags: 0
@@ -16360,7 +16524,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542942468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -49.64, y: 0, z: -17.71}
+  m_LocalPosition: {x: -61.2, y: 0, z: -2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 879611695}

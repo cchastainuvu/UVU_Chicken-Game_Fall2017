@@ -48,6 +48,10 @@ public void OnTriggerStay (Collider other) {
 	// 	transform.position = healthSpawn.position;
 	// 	transform.rotation = healthSpawn.rotation;
 	// }
+	else {
+		Debug.Log ("Player is not within range.");
+	}
+
 }
 
 // public void OnTriggerEnter (Collider other) {

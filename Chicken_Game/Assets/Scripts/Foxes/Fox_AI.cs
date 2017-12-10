@@ -11,7 +11,8 @@ public Transform target;
 // public Transform target4;
 // public Transform target5;
 public float moveSpeed;
-
+// public int points = 5;
+public AudioSource foxCry;
 
 void Start () {
 	target = GameObject.FindWithTag("Chicken").transform;
@@ -27,6 +28,8 @@ void OnTriggerStay (Collider other) {
 		transform.LookAt (target);
 		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
 		wanderScript.enabled = true;
+
+		// Score_Manager.TakePoints(points);
 	}
 }
 
@@ -49,6 +52,10 @@ public void OnCollisionEnter (Collision other) {
 		// }
 		if (other.gameObject.tag == "Checkpoint") {
 			Turn();
+	}
+	else if (other.gameObject.tag == "Player") {
+		AudioSource foxCry = GetComponent<AudioSource>();
+		foxCry.Play();
 	}
 }
 
