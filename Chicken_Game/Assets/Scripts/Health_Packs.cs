@@ -19,7 +19,7 @@ public Transform healthSpawn3;
 // }
 
 void Update() {
-	transform.Rotate(0, 2, 0);
+	transform.Rotate(0, 0.5f, 0);
 	//Slowly rotates HealthPack horizontally.
 }
 

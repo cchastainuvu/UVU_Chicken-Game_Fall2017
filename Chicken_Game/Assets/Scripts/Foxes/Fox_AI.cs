@@ -6,10 +6,10 @@ public class Fox_AI : MonoBehaviour {
 
 public Transform foxSpawn;
 public Transform target;
-public Transform target2;
-public Transform target3;
-public Transform target4;
-public Transform target5;
+// public Transform target2;
+// public Transform target3;
+// public Transform target4;
+// public Transform target5;
 public float moveSpeed;
 
 

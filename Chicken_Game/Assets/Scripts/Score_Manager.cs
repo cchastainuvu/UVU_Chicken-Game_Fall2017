@@ -21,6 +21,8 @@ public Text winText;
 public int winScore;
 // public int loseScore;
 
+// public AudioClip applause;
+// public AudioSource applause;
 
 void Awake () {
 	Time.timeScale = 1;
@@ -32,6 +34,8 @@ void Start () {
 		score = 0;
 
 	winText.GetComponent<Text>().enabled = false;
+
+	// StartCoroutine(LoadAfterDelay("MainScreen"));
 }
 
 void Update () {
@@ -58,9 +62,47 @@ void Update () {
 	
 
 	if (Input.GetKeyDown(KeyCode.Escape)){
+		// AudioSource applause = GetComponent<AudioSource>();
+		// applause.Play();
+		// yield return new WaitForSeconds(2);
 		SceneManager.LoadScene(0);
+		// StartCoroutine(LoadAfterDelay());
+		// StartCoroutine(LoadSound("MainScreen"));
+	}
+
+	if (Input.GetKeyDown(KeyCode.Escape) && score>=winScore){
+		AudioSource applause = GetComponent<AudioSource>();
+		applause.Play();
 	}
 }
+
+// public void ModeSelect () {
+	
+// }
+
+// IEnumerator LoadAfterDelay (string levelName) {
+
+
+// 	if (Input.GetKeyDown(KeyCode.Escape)) {
+// 	yield return new WaitForSeconds(2);
+// 		SceneManager.LoadScene(0);
+// 	AudioSource applause = GetComponent<AudioSource>();
+// 		applause.Play();
+	
+// }
+// }
+
+// IEnumerator LoadSound(string mainMenu){
+
+// 	if (Input.GetKeyDown(KeyCode.Escape)){
+//              yield return new WaitForSeconds(0f); // wait time
+//          	GetComponent<AudioSource>().PlayOneShot(applause);
+ 
+//          	yield return new WaitForSeconds(1f);
+ 
+//          	SceneManager.LoadScene(0);
+// }
+// }
 
 public static void AddPoints (int pointsToAdd) {
 	score += pointsToAdd;
@@ -70,6 +112,12 @@ public static void AddPoints (int pointsToAdd) {
 // public static void AddPointsHop (int pointsToAdd2) {
 // 	score = score + pointsToAdd2;
 // }
+
+
+public static void TakePoints (int pointsToTake) {
+	score -= pointsToTake;
+}
+
 public void Reset () {
 	score = 0;
 }

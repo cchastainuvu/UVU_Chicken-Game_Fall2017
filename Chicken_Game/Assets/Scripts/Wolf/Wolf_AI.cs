@@ -12,6 +12,10 @@ public class Wolf_AI : MonoBehaviour {
 	public int damage;
 	public GameObject pcHealth;
 
+	// public AudioSource wolfMusic;
+	// public AudioClip wolf;
+	// public AudioClip mainMusic;
+
 // public AudioClip wolfMusic;
 // public AudioSource audioSource;
 
@@ -19,18 +23,22 @@ public class Wolf_AI : MonoBehaviour {
 // 	GetComponent<AudioSource> ().enabled = false;
 // }
 
-// void Start ()   
-//      {
-//          GetComponent<AudioSource> ().playOnAwake = false;
-//          GetComponent<AudioSource> ().clip = wolfMusic;
-//      } 
 
 // void OnTriggerEnter (Collider other) {
-// 	audioSource = GetComponent<AudioSource>();
-//         audioSource.clip = wolfMusic;
-//         audioSource.Play();
+// 	if (other.gameObject.name == "Player") {
+// 	AudioSource music = GetComponent<AudioSource>();
+// 		music.Play();
+// 	// GetComponent<AudioSource>().enabled = true;
+// 	// if(true) {
+// 	// 	AudioSource music = GetComponent<AudioSource>();
+// 	// 	music.Play();
+// 	}
 // }
 
+// void OnTriggerExit (Collider other) {
+// 	AudioSource music = GetComponent<AudioSource>();
+//     music.Stop();
+// }
 
 void OnTriggerStay (Collider other) {
 	if (other.gameObject.name == "Player") {
@@ -40,10 +48,9 @@ void OnTriggerStay (Collider other) {
 		transform.LookAt (target);
 		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
 		wanderScript.enabled = true;
-		
+
 	}
 }
-
 
 public void OnCollisionEnter (Collision other) {
 

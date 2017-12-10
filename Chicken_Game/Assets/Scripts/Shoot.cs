@@ -8,6 +8,10 @@ public Rigidbody projectile;
 public float speed = 20f;
 public float lifetime = 3.0f;
 
+public AudioSource gunShot;
+
+
+
 
 void Update () {
 
@@ -17,7 +21,12 @@ void Update () {
 		//as Rigidbody converts the object to a Rigidbody for use with C#
 
 		instantiatedProjectile.velocity = transform.TransformDirection (new Vector3 (0,0,speed));
+
+		AudioSource shoot = GetComponent<AudioSource>();
+		shoot.Play();
 	}
+}
+
 
 }
 
@@ -55,4 +64,4 @@ void Update () {
 
 // }
 
-}
+

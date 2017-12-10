@@ -46,6 +46,10 @@ void OnCollisionEnter (Collision other) {
 		// SpawnChicken();
 		Destroy(gameObject);
 	}
+
+	if (other.gameObject.tag == "Bullet") {
+		Score_Manager.TakePoints(points);
+	}
 }
 
 void Turn () {
