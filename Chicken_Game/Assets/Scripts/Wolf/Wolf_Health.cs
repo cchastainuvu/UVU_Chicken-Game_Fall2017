@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Wolf_Health : MonoBehaviour {
 
+public GameObject wolf;
 public int currentHealth;
 public int maxHealth = 3;
 public Transform spawnPoint;
@@ -28,6 +29,9 @@ public void TakeDamage (int amount) {
 		//Add points to score for killing wolf
 		Score_Manager.AddPoints(points);
 		//Move wolf to spawn point ofr restart
+		// Destroy(wolf);
+		// int spawnPointIndex = Random.Range (0,spawnPoints.Length);
+		// Instantiate (wolf, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 		transform.position = spawnPoint.position;
 		transform.rotation = spawnPoint.rotation;
 		//Reset Wolf Health

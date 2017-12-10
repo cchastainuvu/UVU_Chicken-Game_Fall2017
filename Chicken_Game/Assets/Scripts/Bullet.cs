@@ -27,7 +27,7 @@ void OnCollisionEnter(Collision other)
 		Destroy(gameObject);
 	}
 
-	if (other.gameObject.tag == "Chicken") {
+	if (other.gameObject.tag == "Chicken" || other.gameObject.tag == "THE Chicken") {
 		Destroy(gameObject);
 	}
 }

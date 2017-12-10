@@ -8,6 +8,7 @@ TagManager:
   - Chicken
   - Bullet
   - Fox
+  - THE Chicken
   layers:
   - Default
   - TransparentFX

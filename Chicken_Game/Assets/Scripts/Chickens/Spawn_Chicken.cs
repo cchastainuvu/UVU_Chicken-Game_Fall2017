@@ -4,33 +4,55 @@ using UnityEngine;
 
 public class Spawn_Chicken : MonoBehaviour {
 
-public Rigidbody chicken;
+public GameObject chicken;
+public float spawnTime = 3f;
+public Transform [] spawnPoints;
+
+public float startDelay = 1f;
+public float repeatDelay = 50f;
+
+void Start () {
+    InvokeRepeating("Spawn", startDelay, repeatDelay);
+    // StartCoroutine(Spawn());
+
+}
+void Spawn () {
+        int spawnPointIndex = Random.Range (0,spawnPoints.Length);
+        // yield return new WaitForSeconds (spawnTime);
+        Instantiate (chicken, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+    }
+
+
+}
+
+
+// public Rigidbody chicken;
 // public float spawnRate = 5f;
 //instantiates chicken every 5 seconds
-public int dummyVar = 1;
-public float speed = 0f;
+// public int dummyVar = 1;
+// public float speed = 0f;
 // public float lifetime = 3.0f;
 
 
-public GameObject chickenPrefab;
-public Transform chickenSpawn;
+// public GameObject chickenPrefab;
+// public Transform chickenSpawn;
 
-public float spawnRate = 8.0f;
+// public float spawnRate = 8.0f;
 
 
-    void Start() {
-        StartCoroutine(SpawnChicken());
-    }
+//     void Start() {
+//         StartCoroutine(SpawnChicken());
+//     }
 
-    IEnumerator SpawnChicken() {
-        print(Time.time);
-        yield return new WaitForSeconds(2);
-        print(Time.time);
+//     IEnumerator SpawnChicken() {
+//         print(Time.time);
+//         yield return new WaitForSeconds(2);
+//         print(Time.time);
 
-		Rigidbody instantiatedChicken = Instantiate (chicken, transform.position, transform.rotation) as Rigidbody;
-		instantiatedChicken.velocity = transform.TransformDirection (new Vector3 (0,0,speed));
-    }
-}
+// 		Rigidbody instantiatedChicken = Instantiate (chicken, transform.position, transform.rotation) as Rigidbody;
+// 		instantiatedChicken.velocity = transform.TransformDirection (new Vector3 (0,0,speed));
+//     }
+// }
 
 
 
@@ -53,6 +75,6 @@ public float spawnRate = 8.0f;
 // 		yield return new WaitForSeconds (5);
 // }
 
-// }
+
 
 

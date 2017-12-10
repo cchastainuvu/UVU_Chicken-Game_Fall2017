@@ -8,14 +8,18 @@ public GameObject healthPack;
 public int healing;
 public GameObject playHealth;
 // public GameObject healthSpawnPoint;
-public Transform [] healthSpawns;
-public float spawnTime = 3f;
+// public Transform [] healthSpawns;
+// public float spawnTime = 3f;
 
 
 // void Start () {
 // 	healthSpawn [1] = healthSpawn [1];
 // 	healthSpawn [2] = healthSpawn [2];
 // 	healthSpawn [3] = healthSpawn [3];
+// }
+
+// void Start () {
+// 	Spawn();
 // }
 
 void Update() {
@@ -50,9 +54,9 @@ public void OnTriggerStay (Collider other) {
 	
 // }
 
-public void Spawn () {
-        int spawnPointIndex = Random.Range (0,healthSpawns.Length);
+// public void Spawn () {
+//         int spawnPointIndex = Random.Range (0,healthSpawns.Length);
 
-		Instantiate (healthPack, healthSpawns[spawnPointIndex].position, healthSpawns[spawnPointIndex].rotation);
-    }
+// 		Instantiate (healthPack, healthSpawns[spawnPointIndex].position, healthSpawns[spawnPointIndex].rotation);
+//     }
 }

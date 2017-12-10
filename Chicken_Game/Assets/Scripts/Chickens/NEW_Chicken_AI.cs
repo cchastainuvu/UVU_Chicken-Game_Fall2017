@@ -7,10 +7,11 @@ public class NEW_Chicken_AI : MonoBehaviour {
 
 // public Rigidbody enemy;
 
+// Regular variables:
 public float moveSpeed;
 public Transform target;
 public Transform chickenPen;
-public Transform chickenSpawn;
+// public Transform chickenSpawn;
 public int points = 10;
 public int time = 4;
 
@@ -64,6 +65,11 @@ void Turn () {
 // 	transform.position = chickenSpawn.position;
 // 	transform.rotation = chickenSpawn.rotation;
 // }
+
+
+
+
+
 
 }
 
