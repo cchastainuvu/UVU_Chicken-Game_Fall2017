@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Health_Packs : MonoBehaviour {
 
+public GameObject healthPack;
 public int healing;
 public GameObject playHealth;
 // public GameObject healthSpawnPoint;
-public Transform healthSpawn;
-public Transform healthSpawn2;
-public Transform healthSpawn3;
+public Transform [] healthSpawns;
+public float spawnTime = 3f;
 
 
 // void Start () {
@@ -19,7 +19,7 @@ public Transform healthSpawn3;
 // }
 
 void Update() {
-	transform.Rotate(0, 0.5f, 0);
+	transform.Rotate(0, 1f, 0 * Time.deltaTime);
 	//Slowly rotates HealthPack horizontally.
 }
 
@@ -32,22 +32,27 @@ public void OnTriggerStay (Collider other) {
 	}
 	// if (playHealth != null) {}
 	
-	if (other.gameObject.name == "Player" && other.gameObject.name == "Spawn 1") {
-		transform.position = healthSpawn2.position;
-		transform.rotation = healthSpawn2.rotation;
-	}
-	if (other.gameObject.name == "Player" && other.gameObject.name == "Spawn 2") {
-		transform.position = healthSpawn3.position;
-		transform.rotation = healthSpawn3.rotation;
-	}
-	if (other.gameObject.name == "Player" && other.gameObject.name == "Spawn 3") {
-		transform.position = healthSpawn.position;
-		transform.rotation = healthSpawn.rotation;
-	}
+	// if (other.gameObject.name == "Player" && other.gameObject.name == "Spawn 1") {
+	// 	transform.position = healthSpawn2.position;
+	// 	transform.rotation = healthSpawn2.rotation;
+	// }
+	// if (other.gameObject.name == "Player" && other.gameObject.name == "Spawn 2") {
+	// 	transform.position = healthSpawn3.position;
+	// 	transform.rotation = healthSpawn3.rotation;
+	// }
+	// if (other.gameObject.name == "Player" && other.gameObject.name == "Spawn 3") {
+	// 	transform.position = healthSpawn.position;
+	// 	transform.rotation = healthSpawn.rotation;
+	// }
 }
 
-public void OnTriggerEnter (Collider other) {
+// public void OnTriggerEnter (Collider other) {
 	
-}
+// }
 
+public void Spawn () {
+        int spawnPointIndex = Random.Range (0,healthSpawns.Length);
+
+		Instantiate (healthPack, healthSpawns[spawnPointIndex].position, healthSpawns[spawnPointIndex].rotation);
+    }
 }
