@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Fox
   - THE Chicken
+  - Wolf2
+  - Wolf
+  - FollowBlock
   layers:
   - Default
   - TransparentFX

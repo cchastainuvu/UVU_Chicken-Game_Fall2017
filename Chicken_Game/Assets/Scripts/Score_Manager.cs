@@ -61,20 +61,39 @@ void Update () {
 	// 	Time.timeScale=0;
 	
 
-	if (Input.GetKeyDown(KeyCode.Escape)){
+	if (Input.GetKeyDown(KeyCode.Escape) && score != winScore){
+
+		SceneManager.LoadScene(0);
 		// AudioSource applause = GetComponent<AudioSource>();
 		// applause.Play();
 		// yield return new WaitForSeconds(2);
-		SceneManager.LoadScene(0);
+		// StartCoroutine(LevelLoad()); *
 		// StartCoroutine(LoadAfterDelay());
 		// StartCoroutine(LoadSound("MainScreen"));
 	}
 
-	if (Input.GetKeyDown(KeyCode.Escape) && score>=winScore){
+	if (score>=winScore && Input.GetKeyDown(KeyCode.Escape)){
 		AudioSource applause = GetComponent<AudioSource>();
 		applause.Play();
+		LevelLoad();
 	}
 }
+// IEnumerator LevelDelay() {
+	
+// 	Time.timeScale = 1;
+// 	yield return new WaitForSeconds (4);
+// 	SceneManager.LoadScene(0);
+// 	// StartCoroutine(LevelLoad());
+// }
+
+void LevelLoad() {
+	// int yield = 4;
+	// Time.timeScale = 1;
+	// yield return new WaitForSeconds (0);
+	SceneManager.LoadScene(0);
+}
+
+
 
 // public void ModeSelect () {
 	

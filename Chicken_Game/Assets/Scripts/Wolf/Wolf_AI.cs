@@ -40,6 +40,7 @@ public class Wolf_AI : MonoBehaviour {
 //     music.Stop();
 // }
 
+
 void OnTriggerStay (Collider other) {
 	if (other.gameObject.name == "Player") {
 	

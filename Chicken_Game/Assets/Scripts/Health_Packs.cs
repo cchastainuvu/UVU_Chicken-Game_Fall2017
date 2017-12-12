@@ -22,8 +22,8 @@ public GameObject playHealth;
 // 	Spawn();
 // }
 
-void Update() {
-	transform.Rotate(0, 1f, 0 * Time.deltaTime);
+void FixedUpdate() {
+	transform.Rotate(0, 100f * Time.deltaTime, 0);
 	//Slowly rotates HealthPack horizontally.
 }
 

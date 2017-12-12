@@ -9,7 +9,7 @@ public float spawnTime = 3f;
 public Transform [] spawnPoints;
 
 public float startDelay = 1f;
-public float repeatDelay = 80f;
+public float repeatDelay = 1f;
 
 void Start () {
     InvokeRepeating("Spawn", startDelay, repeatDelay);

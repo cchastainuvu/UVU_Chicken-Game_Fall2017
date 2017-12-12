@@ -31,6 +31,7 @@ void OnTriggerStay (Collider other) {
 
 		// Score_Manager.TakePoints(points);
 	}
+
 }
 
 public void OnCollisionEnter (Collision other) {
