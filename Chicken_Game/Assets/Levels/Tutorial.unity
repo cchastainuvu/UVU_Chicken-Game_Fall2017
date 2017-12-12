@@ -480,8 +480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -3}
-  m_SizeDelta: {x: 730.6, y: 270.2}
+  m_AnchoredPosition: {x: 5, y: 20}
+  m_SizeDelta: {x: 834, y: 281.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323278602
 MonoBehaviour:
@@ -518,10 +518,12 @@ MonoBehaviour:
   m_Text: 'Capture all the chickens to win, but beware the Wolf!
 
 
-    Use your rifle to fend off the Wolf, or seek out your loyal dog companion for
-    a one-time defense. If you''re caught, it''s game over!
+    If the Wolf catches you it''s game over. Use your rifle or find your loyal dog
+    companion to fend it off. Grab a health pack if you survive!
 
-    If you survive the attack, find a Health Pack!
+
+    Find the Chicken Hat, and all the chickens will run to you for a short time, but
+    you cannot fire your rifle, and you will not be able to access Health Packs!
 
 
     Be sure to keep an eye on the foxes as well. They are docile and will not attack
@@ -644,7 +646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 161.8}
+  m_AnchoredPosition: {x: 5, y: 184}
   m_SizeDelta: {x: 384.5, y: 59.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1953411455

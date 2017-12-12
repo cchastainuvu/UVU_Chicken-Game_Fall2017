@@ -11,6 +11,14 @@ void Start () {
 	StartCoroutine(DestroyBullet());
 }
 
+void OnTriggerStay (Collider other){
+
+	if (other.gameObject.tag != "ChickHat") {
+		 Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
+	}
+
+}
+
 void OnCollisionEnter(Collision other)
 {
 	var hit = other.gameObject;

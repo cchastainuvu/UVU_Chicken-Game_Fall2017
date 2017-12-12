@@ -13,9 +13,10 @@ void Start () {
 	Spawn();
 }
 
-void FixedUpdate() {
-	transform.Rotate(0, 100f * Time.deltaTime, 0);
-}
+// void FixedUpdate() {
+// 	transform.Rotate(0, 100f * Time.deltaTime, 0);
+// }
+
 void Spawn () {
         int spawnPointIndex = Random.Range (0,hatSpawns.Length);
         // yield return new WaitForSeconds (spawnTime);

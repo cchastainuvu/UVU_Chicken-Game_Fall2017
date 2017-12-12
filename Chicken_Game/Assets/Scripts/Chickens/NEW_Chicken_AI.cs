@@ -19,6 +19,7 @@ public int time = 4;
 // 	StartCoroutine(SpawnChicken());
 // }
 
+
 void OnTriggerStay (Collider other) {
 	if (other.gameObject.name == "Player") {
 		Debug.Log ("Player has entered the chicken's trigger.");
@@ -27,6 +28,13 @@ void OnTriggerStay (Collider other) {
 		// transform.LookAt(target);
 		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
 		transform.rotation = Quaternion.Inverse (target.rotation);
+		wanderScript.enabled = true;
+	}
+	if (other.gameObject.tag == "ChickHat"){
+		var wanderScript = this.gameObject.GetComponent<Wander>();
+		wanderScript.enabled = false;
+		transform.LookAt(target);
+		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
 		wanderScript.enabled = true;
 	}
 }

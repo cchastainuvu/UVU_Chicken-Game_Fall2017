@@ -12,6 +12,8 @@ TagManager:
   - Wolf2
   - Wolf
   - FollowBlock
+  - HatSpawn
+  - ChickHat
   layers:
   - Default
   - TransparentFX

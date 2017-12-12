@@ -51,6 +51,10 @@ void OnTriggerStay (Collider other) {
 		wanderScript.enabled = true;
 
 	}
+
+	if (other.gameObject.tag == "ChickHat") {
+		 Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
+	}
 }
 
 public void OnCollisionEnter (Collision other) {

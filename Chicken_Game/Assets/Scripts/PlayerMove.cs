@@ -6,6 +6,13 @@ public class PlayerMove : MonoBehaviour {
 
 //Float will allow more precise aspects of player movement.
 
+public GameObject chickHat;
+public GameObject fakeHat;
+public GameObject hatSpawn;
+public GameObject bulletSpawn;
+
+public Shoot scriptShoot;
+
 public float moveSpeed;
 public float turnSpeed;
 public float jumpHeight;
@@ -18,11 +25,10 @@ public float jumpHeight;
 //To be accessible to the inspector, the variables must be written with public access.
 //Need to establish behavior of player before writing the script, write variables accordingly.
 
-// void Start ()   
-//      {
-//          GetComponent<AudioSource> ().playOnAwake = false;
-//          GetComponent<AudioSource> ().clip = wolfMusic;
-//      } 
+void Start ()   
+     {
+       chickHat.SetActive(false);
+     } 
 
 void Update () {
 
@@ -51,6 +57,43 @@ don't go crazy updating nearly 60 times per second, like my computer.*/
 //Add constraints so the capsule will not fall over. Do not freeze Y, or no turn.
 }
 
+void OnTriggerStay(Collider other) {
+	
+	if (other.gameObject.tag == "HatSpawn") {
+		// chickHat.SetActive(true);
+		// hatSpawn.SetActive(false);
+		// fakeHat.SetActive(false);
+		// hatSpawn.GetComponent<BoxCollider>().enabled = false;
+		// Destroy(other.gameObject);
+		// Destroy(fakeHat);
+		Destroy(other);
+		StartCoroutine(Activate());
+		// StartCoroutine(WearOut());
+		
+}
+	
+}
+// IEnumerator DestroySpawn() {
+// 	yield return new WaitForSeconds (0);
+// 	hatSpawn.GetComponent<BoxCollider>().enabled = false;
+// 	fakeHat.GetComponent<BoxCollider>().enabled = false;
+// 	Destroy(hatSpawn);
+// 	Destroy(fakeHat);
+// }
+
+IEnumerator Activate() {
+	yield return new WaitForSeconds (0);
+		chickHat.SetActive(true);
+		scriptShoot.enabled = false;
+		fakeHat.SetActive(false);
+		StartCoroutine(WearOut());
+}
+IEnumerator WearOut () {
+
+	yield return new WaitForSeconds (10);
+	scriptShoot.enabled = true;
+	Destroy(chickHat);
+}
 
 		// void OnTriggerStay (Collider other) {
 
