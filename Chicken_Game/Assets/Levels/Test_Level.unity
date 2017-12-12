@@ -994,7 +994,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108813806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.23, y: 2.35, z: -77.4}
+  m_LocalPosition: {x: -63.3, y: 2.35, z: -67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9902,7 +9902,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 31.223366
+      value: 9.46
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9910,7 +9910,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 14.095169
+      value: 5.78
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9918,7 +9918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.8151735
+      value: 0.9927479
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalRotation.z
@@ -9926,7 +9926,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.57921696
+      value: -0.12021561
       objectReference: {fileID: 0}
     - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
       propertyPath: m_RootOrder
@@ -9969,6 +9969,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d8134552442553b4f9efd6af2d11f467, type: 2}
+    - target: {fileID: 4111569203747638, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 193.80899
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dc8618a3b8f1fd45a0149753b307ad0, type: 2}
   m_IsPrefabParent: 0
@@ -14016,6 +14020,7 @@ MonoBehaviour:
   hatSpawn: {fileID: 768465111}
   bulletSpawn: {fileID: 0}
   scriptShoot: {fileID: 859726204}
+  scriptSpawn: {fileID: 720871470}
   moveSpeed: 15
   turnSpeed: 90
   jumpHeight: 5
@@ -16279,7 +16284,7 @@ MeshCollider:
   m_GameObject: {fileID: 1325974984}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
   m_InflateMesh: 0
@@ -16292,8 +16297,8 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1325974984}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -21330,7 +21335,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1789037049}
   - component: {fileID: 1789037052}
-  - component: {fileID: 1789037050}
   m_Layer: 0
   m_Name: ChickenHat
   m_TagString: ChickHat
@@ -21352,18 +21356,6 @@ Transform:
   m_Father: {fileID: 1109444448}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1789037050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1789037048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1002cd1ef5a54c54ca543ce68d956360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUp: {fileID: 1325974984}
 --- !u!65 &1789037052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21374,8 +21366,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.601286, y: 4.018884, z: 15.772568}
-  m_Center: {x: -0.14412674, y: -1.0094421, z: -14.549092}
+  m_Size: {x: 19.706467, y: 4.018884, z: 12.510703}
+  m_Center: {x: -0.591534, y: -1.0094421, z: -12.91816}
 --- !u!1 &1791549250
 GameObject:
   m_ObjectHideFlags: 0

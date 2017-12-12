@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -158}
+  m_AnchoredPosition: {x: 0, y: -164}
   m_SizeDelta: {x: 223.7, y: 57.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991112680
@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 1323278603}
   - component: {fileID: 1323278602}
   - component: {fileID: 1323278604}
+  - component: {fileID: 1323278605}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -480,8 +481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 20}
-  m_SizeDelta: {x: 834, y: 281.8}
+  m_AnchoredPosition: {x: -5, y: 14}
+  m_SizeDelta: {x: 752.3, y: 292.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323278602
 MonoBehaviour:
@@ -518,16 +519,19 @@ MonoBehaviour:
   m_Text: 'Capture all the chickens to win, but beware the Wolf!
 
 
-    If the Wolf catches you it''s game over. Use your rifle or find your loyal dog
-    companion to fend it off. Grab a health pack if you survive!
+    If the Wolf attacks you, use your Rifle, find your trusty Dog, or get to a Health
+    Pack or it''s GAME OVER!
 
 
-    Find the Chicken Hat, and all the chickens will run to you for a short time, but
-    you cannot fire your rifle, and you will not be able to access Health Packs!
+    Keep an eye on the Foxes, they are docile and won''t attack you, but they''ll
+    eat your chickens!
 
 
-    Be sure to keep an eye on the foxes as well. They are docile and will not attack
-    you, but they sure are hungry for some chickens...'
+    Find the Chicken Hat, and your chickens will run right up to you for a short time,
+    but you cannot shoot or access Health Packs.
+
+
+'
 --- !u!222 &1323278603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -614,6 +618,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!223 &1323278605
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323278600}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1953411453
 GameObject:
   m_ObjectHideFlags: 0

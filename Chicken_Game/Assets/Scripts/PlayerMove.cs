@@ -12,7 +12,8 @@ public GameObject hatSpawn;
 public GameObject bulletSpawn;
 
 public Shoot scriptShoot;
-
+// public SpawnHat_Spin scriptSpawn;
+public Hat_Spawn scriptSpawn;
 public float moveSpeed;
 public float turnSpeed;
 public float jumpHeight;
@@ -66,11 +67,17 @@ void OnTriggerStay(Collider other) {
 		// hatSpawn.GetComponent<BoxCollider>().enabled = false;
 		// Destroy(other.gameObject);
 		// Destroy(fakeHat);
-		Destroy(other);
+		// Destroy(other);
+		
 		StartCoroutine(Activate());
 		// StartCoroutine(WearOut());
 		
 }
+
+	// if (other.gameObject.tag ) {
+	// 	// fakeHat.SetActive(false);
+	// 	StartCoroutine(Activate());
+	// }
 	
 }
 // IEnumerator DestroySpawn() {
@@ -85,16 +92,24 @@ IEnumerator Activate() {
 	yield return new WaitForSeconds (0);
 		chickHat.SetActive(true);
 		scriptShoot.enabled = false;
-		fakeHat.SetActive(false);
+		scriptSpawn.enabled = false;
+		// fakeHat.SetActive(false);
+		// StartCoroutine(DeactivatePower());
 		StartCoroutine(WearOut());
 }
 IEnumerator WearOut () {
 
 	yield return new WaitForSeconds (10);
 	scriptShoot.enabled = true;
+	// scriptSpawn.enabled = false;
 	Destroy(chickHat);
 }
 
+// IEnumerator DeactivatePower () {
+// 	yield return new WaitForSeconds (0);
+// 	// fakeHat.SetActive(false);
+// 	Debug.Log ("HELLOOO is anyone there?");
+// }
 		// void OnTriggerStay (Collider other) {
 
 		// 	if (other.gameObject.name == "Wolf") {
