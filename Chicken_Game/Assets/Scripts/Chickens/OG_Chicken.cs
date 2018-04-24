@@ -44,6 +44,7 @@ void OnCollisionEnter (Collision other) {
 	if (other.gameObject.tag == "Bullet") {
 		Score_Manager.TakePoints(points);
 	}
+
 }
 
 void Turn () {
