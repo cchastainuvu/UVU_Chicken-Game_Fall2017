@@ -19,6 +19,6 @@ Platform assembly: E:\Documents\Github\Reposits\UVU_Chicken-Game_Fall2017\Chicke
 Loading E:\Documents\Github\Reposits\UVU_Chicken-Game_Fall2017\Chicken_Game\ChickenGame_ChastainCalysto_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: E:\Documents\Github\Reposits\UVU_Chicken-Game_Fall2017\Chicken_Game\ChickenGame_ChastainCalysto_Data\Managed\System.dll (this message is harmless)
 Platform assembly: E:\Documents\Github\Reposits\UVU_Chicken-Game_Fall2017\Chicken_Game\ChickenGame_ChastainCalysto_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.205 seconds
+- Completed reload, in  0.018 seconds
 <RI> Initializing input.
 <RI> Input initialized.
