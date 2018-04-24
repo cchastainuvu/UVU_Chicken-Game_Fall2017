@@ -6,4 +6,4 @@ Here is the game I completed during my time in the DGM1600 course offered by UVU
 
 Navigate to the **builds/pc** folder of the downloaded .zip file or cloned repository, and run **chickengame_x86.exe**
 
-#### Scripts and other assets are located within the Chicken_Game folder.
+**Scripts** and other **assets** are located within the **Chicken_Game** folder.
