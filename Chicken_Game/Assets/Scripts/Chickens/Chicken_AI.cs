@@ -28,10 +28,6 @@ bounce off contact, walls, floor, etc. Triggers allow passing through.*/
 
 //Trigger will log everything that enters and exits the trigger.
 
-// 	void Start () {
-
-// 	StartCoroutine (NewHeading());
-//  }
 
 	void OnTriggerStay (Collider other) {
 
@@ -70,45 +66,5 @@ bounce off contact, walls, floor, etc. Triggers allow passing through.*/
 		}
 
 	}
-
-
-
- 
-
-
-// void Awake () {
-// 	controller = GetComponent <CharacterController>();
-// 	heading = Random.Range (0,360);
-// 	transform.eulerAngles = new Vector3 (0 , heading , 0);
-
-// }
-
-// void FixedUpdate ()
-// 	{
-// 		transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, targetRotation, Time.deltaTime * directionChangeInterval);
-// 		var forward = transform.TransformDirection(Vector3.forward);
-// 		controller.SimpleMove(forward * speed);
-// 	}
- 
-// 	IEnumerator NewHeading ()
-// 	{
-// 		while (true) {
-// 			NewHeadingRoutine();
-// 			yield return new WaitForSeconds(directionChangeInterval);
-// 		}
-// 	}
-
-// 	void NewHeadingRoutine ()
-// 	{
-// 		var floor = Mathf.Clamp(heading - maxHeadingChange, 0, 360);
-// 		var ceil  = Mathf.Clamp(heading + maxHeadingChange, 0, 360);
-// 		heading = Random.Range(floor, ceil);
-// 		targetRotation = new Vector3(0, heading, 0);
-// 	}
-
-
-// void Update () {
-// 	transform.localPosition = transform.localPosition + - transform.forward * moveSpeed * Time.deltaTime;
-// }
 
 }
