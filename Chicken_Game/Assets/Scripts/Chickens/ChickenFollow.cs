@@ -11,7 +11,7 @@ public class ChickenFollow : MonoBehaviour {
 void Start () {
 
 target = GameObject.FindWithTag("Player").transform;
-//Allows chicken to find player, or else it just wanders off into the void.
+
 
 }
 
