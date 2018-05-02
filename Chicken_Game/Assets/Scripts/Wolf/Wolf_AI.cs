@@ -6,39 +6,10 @@ using UnityEngine.AI;
 // [RequireComponent (typeof(CharacterController))]
 public class Wolf_AI : MonoBehaviour {
 
-	// public Rigidbody wolf;
 	public float moveSpeed;
 	public Transform target;
 	public int damage;
 	public GameObject pcHealth;
-
-	// public AudioSource wolfMusic;
-	// public AudioClip wolf;
-	// public AudioClip mainMusic;
-
-// public AudioClip wolfMusic;
-// public AudioSource audioSource;
-
-// void Awake () {
-// 	GetComponent<AudioSource> ().enabled = false;
-// }
-
-
-// void OnTriggerEnter (Collider other) {
-// 	if (other.gameObject.name == "Player") {
-// 	AudioSource music = GetComponent<AudioSource>();
-// 		music.Play();
-// 	// GetComponent<AudioSource>().enabled = true;
-// 	// if(true) {
-// 	// 	AudioSource music = GetComponent<AudioSource>();
-// 	// 	music.Play();
-// 	}
-// }
-
-// void OnTriggerExit (Collider other) {
-// 	AudioSource music = GetComponent<AudioSource>();
-//     music.Stop();
-// }
 
 
 void OnTriggerStay (Collider other) {
@@ -80,28 +51,3 @@ void Turn () {
 }
 
 }
-
-
-
-// void OnTriggerStay(Collider other) {
-
-// if (other.gameObject.name == "Player") {
-
-// 	transform.LookAt (target);
-// 	transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
-// }
-
-// // else if (other.gameObject.name != "Player") {
-
-// // 	// transform.LookAt (wanderTarget);
-// // 	transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
-// // }
-
-
-// }
-
-
-	
-	//Need to refactor code / "start over".
-
-// }
