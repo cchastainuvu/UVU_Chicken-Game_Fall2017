@@ -12,6 +12,8 @@ public Transform chickenSpawn;
 public int points = 10;
 public int time = 4;
 
+//Script for chicken that will spawn from beneath the map to replenish chicken supply.
+	
 void OnTriggerStay (Collider other) {
 	if (other.gameObject.name == "Player") {
 		Debug.Log ("Player has entered the chicken's trigger.");
