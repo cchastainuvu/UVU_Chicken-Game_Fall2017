@@ -13,9 +13,6 @@ public Transform homeTarget;
 public GameObject wolfHealth;
 public AudioSource dogBark;
 
-// public bool playerHere = true;
-// public bool wolfHere = true;
-
 public string who;
 
 void Start () {
@@ -41,14 +38,6 @@ void OnCollisionEnter (Collision other) {
 
 }
 
-// IEnumerator GoHome () {
-// 	yield return new WaitForSeconds (2);
-// 	transform.LookAt(homeTarget);
-// 	float step = moveSpeed * Time.deltaTime;
-// 	transform.position = Vector3.MoveTowards(transform.position,homeTarget.position, step);
-	
-// }
-
 IEnumerator WaitDestroy () {
 		yield return new WaitForSeconds (1);
 		Destroy(gameObject);
@@ -63,20 +52,15 @@ void OnTriggerStay (Collider other){
 
 	if (other.gameObject.name == "Player") {
 		who = "Player";
-		// playerHere = true;
-		// wolfHere = false; 
+
 		var wanderScript = this.gameObject.GetComponent<Wander>();
 		wanderScript.enabled = false;
 		FollowDetermine();
-		// transform.LookAt (target);
-		// transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
-
-		// wanderScript.enabled = true;
+		
 	}
 	if (other.gameObject.name == "Wolf") {
 		who = "Wolf";
-		// wolfHere = true;
-		// playerHere = false;
+		
 		var wanderScript = this.gameObject.GetComponent<Wander>();
 		wanderScript.enabled = false;
 		FollowDetermine();
@@ -84,8 +68,7 @@ void OnTriggerStay (Collider other){
 
 	if (other.gameObject.name == "Player" && other.gameObject.name == "Wolf") {
 		who = "Both";
-		// wolfHere = true;
-		// playerHere = true;
+		
 		var wanderScript = this.gameObject.GetComponent<Wander>();
 		wanderScript.enabled = false;
 		FollowDetermine();
@@ -99,19 +82,6 @@ void OnTriggerStay (Collider other){
 	}
 
 }
-
-// void OnCollisionStay (Collision other) {
-// 	if (other.gameObject.tag == "FollowBlock") {
-// 	moveSpeed = 0;
-// 	StartCoroutine(WaitWalk());
-// 	}
-// }
-
-// IEnumerator WaitWalk () {
-// 	yield return new WaitForSeconds (1 * Time.deltaTime);
-// 	transform.LookAt(target);
-// 	transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
-// }
 
 
 void FollowDetermine () {
@@ -149,47 +119,7 @@ void FollowDetermine () {
 
 		break;
 
-		// case "WolfDead":
-
-		// StartCoroutine(GoHome());
-		// CancelInvoke("FollowDetermine");
-		// break;
-
 }
-
-// 	switch (wolfHere) {
-		
-// 		case true:
-
-		
-
-// 		break;
-
-// 		case false:
-
-// 		transform.LookAt (target);
-// 		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
-
-// 		break;
-// }
-
-// 	switch (wolfHere && playerHere) {
-
-// 		case true:
-
-// 		transform.LookAt (wolfTarget);
-// 		transform.Translate (Vector3.forward * moveSpeed * Time.deltaTime);
-
-// 		break;
-
-// 		case false:
-
-// 		var wanderScript = this.gameObject.GetComponent<Wander>();	
-
-// 		break;	
-// 	}
-
-
 
 }
 }
