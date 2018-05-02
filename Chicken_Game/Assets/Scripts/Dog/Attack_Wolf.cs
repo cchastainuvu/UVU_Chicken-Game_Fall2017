@@ -20,20 +20,17 @@ void Start () {
 }
 
 void OnCollisionEnter (Collision other) {
-	// if (other.gameObject.tag == "DogFollow") {
-		// rigidbody.velocity = Vector3.zero;
-		// yield WaitForSeconds(5);
-	// }
+	
 	if (other.gameObject.name == "Wolf") {
-		// who = "WolfDead";
+		
 		var hit = other.gameObject;
 		var health = hit.GetComponent<Wolf_Health>();
 		wolfHealth.gameObject.GetComponent<Wolf_Health>().TakeDamage(damage);
 		AudioSource dogBark = GetComponent<AudioSource>();
 		dogBark.Play();
-		// CancelInvoke("FollowDetermine");
+		
 		StartCoroutine(WaitDestroy());
-		// Destroy(gameObject);
+		
 	}
 
 }
