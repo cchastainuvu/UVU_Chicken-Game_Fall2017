@@ -12,15 +12,10 @@ public GameObject hatSpawn;
 public GameObject bulletSpawn;
 
 public Shoot scriptShoot;
-// public SpawnHat_Spin scriptSpawn;
 public Hat_Spawn scriptSpawn;
 public float moveSpeed;
 public float turnSpeed;
 public float jumpHeight;
-
-// public AudioClip wolfMusic;
-
-// public Rigidbody rigidBody;
 
 //Anytime you have a value you would like to store and process later, use a variable.
 //To be accessible to the inspector, the variables must be written with public access.
@@ -61,80 +56,26 @@ don't go crazy updating nearly 60 times per second, like my computer.*/
 void OnTriggerStay(Collider other) {
 	
 	if (other.gameObject.tag == "HatSpawn") {
-		// chickHat.SetActive(true);
-		// hatSpawn.SetActive(false);
-		// fakeHat.SetActive(false);
-		// hatSpawn.GetComponent<BoxCollider>().enabled = false;
-		// Destroy(other.gameObject);
-		// Destroy(fakeHat);
-		// Destroy(other);
 		
 		StartCoroutine(Activate());
-		// StartCoroutine(WearOut());
 		
 }
 
-	// if (other.gameObject.tag ) {
-	// 	// fakeHat.SetActive(false);
-	// 	StartCoroutine(Activate());
-	// }
 	
 }
-// IEnumerator DestroySpawn() {
-// 	yield return new WaitForSeconds (0);
-// 	hatSpawn.GetComponent<BoxCollider>().enabled = false;
-// 	fakeHat.GetComponent<BoxCollider>().enabled = false;
-// 	Destroy(hatSpawn);
-// 	Destroy(fakeHat);
-// }
 
 IEnumerator Activate() {
 	yield return new WaitForSeconds (0);
 		chickHat.SetActive(true);
 		scriptShoot.enabled = false;
 		scriptSpawn.enabled = false;
-		// fakeHat.SetActive(false);
-		// StartCoroutine(DeactivatePower());
 		StartCoroutine(WearOut());
 }
 IEnumerator WearOut () {
 
 	yield return new WaitForSeconds (10);
 	scriptShoot.enabled = true;
-	// scriptSpawn.enabled = false;
 	Destroy(chickHat);
 }
-
-// IEnumerator DeactivatePower () {
-// 	yield return new WaitForSeconds (0);
-// 	// fakeHat.SetActive(false);
-// 	Debug.Log ("HELLOOO is anyone there?");
-// }
-		// void OnTriggerStay (Collider other) {
-
-		// 	if (other.gameObject.name == "Wolf") {
-		// 	GetComponent<AudioSource> ().Play ();
-		// }
-		// }
-
-
-// void Start () {
-// 	rigidBody = GetComponent<Rigidbody> ();
-// }
-
-// void OnCollisionEnter (Collider other) {
-
-// 	if (other.gameObject.name == "Chicken") {
-// 		rigidBody.velocity = new Vector3 (0,10,0);
-// 	}
-// 	else if (other.gameObject.name == "Wolf") {
-// 		rigidBody.velocity = new Vector3 (0,10,0);
-// 	}
-
-// 	else {
-// 		rigidBody.velocity = new Vector3 (0,10,0);
-// 	}
-
-// }
 
 }
