@@ -30,38 +30,4 @@ void Update () {
 
 }
 
-// public GameObject bulletPrefab;
-// public Transform bulletSpawn;
-
-
-// void Update () {
-// 	if (Input.GetKeyDown(KeyCode.Space)) {
-// 		Fire();
-// 	}
-// }
-
-// void Fire () {
-// 	var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-// 	bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
-// 	Destroy(bullet, 2.0f);
-
-// }
-
-
-// public Rigidbody projectile; 
-
-// public Transform spawnPoint;
-// public int shootSpeed;
-
-
-// void Update () {
-
-// 	if(Input.GetButtonDown("Fire1")) {
-// 		Rigidbody clone;
-// 		clone = (Rigidbody) Instantiate (projectile, spawnPoint.position, projectile.rotation);
-// 		clone.velocity = spawnPoint.TransformDirection (Vector3.forward * shootSpeed);
-// 	}
-
-// }
-
 
